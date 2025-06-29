@@ -38,9 +38,6 @@ def daily_return(df):
 
 stocks_daily_return = daily_return(stocks_df)
 
-stocks_daily_return.plot(kind = "scatter", x = "sp500", y = "TSLA", color = "white")
-plt.show()
-
 for i in stocks_daily_return.columns:
   pio.renderers.default = "browser"
   if i != 'Date' and i != 'sp500':
