@@ -26,7 +26,7 @@ def interactive_plot(df, title):
         fig.add_scatter(x = df["Date"], y = df[i], name = i)
     fig.show()
 
-#interactive_plot(normalize(stocks_df), "Normalized Prices")
+interactive_plot(normalize(stocks_df), "Normalized Prices")
 
 def daily_return(df):
     df_daily_return = df.copy()
@@ -39,7 +39,7 @@ def daily_return(df):
 stocks_daily_return = daily_return(stocks_df)
 
 stocks_daily_return.plot(kind = "scatter", x = "sp500", y = "TSLA", color = "white")
-#plt.show()
+plt.show()
 
 for i in stocks_daily_return.columns:
   pio.renderers.default = "browser"
